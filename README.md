@@ -34,3 +34,11 @@ A README.md file, at the root of the folder of the project, is mandatory
 Your code should use the pycodestyle (version 2.8.*)
 All your files must be executable
 The length of your files will be tested using wc
+
+PROJECTS: 
+0x00-Python-hello_World
+0x01-Python-if_else_loops_functions
+0x02-python-import_modules
+0x03-python-data_structures
+0x04-python-more_data_structures
+
