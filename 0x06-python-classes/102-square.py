@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-
+"""Square module."""
 
 class Square:
-    """
-    The class square that has attributes:
-        size
-    some attributes are protected from input.
-    """
+    """Define a square."""
+
+
     def __init__(self, size=0):
         """
         The initialization function for our square clasee
@@ -52,8 +50,11 @@ class Square:
 
     @property
     def size(self):
-        """
-        The getter for size attribute
+        """Propert for the length of a side of this square.
+
+        Raises:
+            TypeError: If size is not an Integer.
+            ValueError: If size is less than 0.
         """
         return self.__size
 
