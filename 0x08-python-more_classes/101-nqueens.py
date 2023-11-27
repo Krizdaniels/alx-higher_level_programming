@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""101-nqueens, It finds all possible solutions the N queens puzzle, including
+""" It finds all possible solutions the N queens puzzle, including
 translations and reflections.
 
 An attempted virtual backtracking without recursion. In local tests process will
@@ -16,7 +16,7 @@ Attributes:
 """
 from sys import argv
 
-if len(argv) is not 2:
+if len(argv) != 2:
     print('Usage: nqueens N')
     exit(1)
 
