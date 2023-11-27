@@ -4,8 +4,8 @@
 
 
 class Rectangle:
-    """It takes in args for width and height of a rectangle, and contains methods
-    for calculation of the area or perimeter.
+    """It takes in args for width and height of a rectangle,
+    and contains methods for calculation of the area or perimeter.
 
     __str__ and __repr__ fuctionality defined below.
 

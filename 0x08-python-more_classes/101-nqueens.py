@@ -2,8 +2,8 @@
 """ It finds all possible solutions the N queens puzzle, including
 translations and reflections.
 
-An attempted virtual backtracking without recursion. In local tests process will
-start to slow down visibly for N > 8, and is successful up to N = 11 but
+An attempted virtual backtracking without recursion. In local tests process
+will start to slow down visibly for N > 8, and is successful up to N = 11 but
 will be killed if used for N > 11. Recursion could allow for a lighter weight
 process, but it's not yet apparent to this student how to retain a record of
 which solutions are already derived with that method.
@@ -128,6 +128,8 @@ def coordinate_format(candidates):
     return alx
 
 # init candidates list with first column of 0s
+
+
 candidates = []
 candidates.append(board_column_gen())
 
