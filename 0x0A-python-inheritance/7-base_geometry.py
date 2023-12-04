@@ -13,7 +13,8 @@ class BaseGeometry:
         raise Exception('area() is not implemented')
 
     def integer_validator(self, name, value):
-        """The input filtration for integers: checks if value is an int above 0.
+        """The input filtration for integers: checks if value is an int
+        above 0.
         No use of self, could be staticmethod.
 
         Args:
