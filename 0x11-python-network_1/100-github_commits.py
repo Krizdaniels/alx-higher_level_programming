@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     repo = argv[1]
     owner = argv[2]
-    
+
     url = 'https://api.github.com/repos/{}/{}/commits'.format(owner, repo)
     try:
         r = requests.get(url)
@@ -21,10 +21,10 @@ if __name__ == "__main__":
         res_list = r.json()
 
         for i in range(min(10, len(res_list))):
-            print("{}: {}".format(res_list[i]['sha'], res_list[i]['commit']['author']['name']))
+            print("{}: {}".format(res_list[i]['sha'],
+                                  res_list[i]['commit']['author']['name']))
 
     except requests.RequestException as e:
         print("Error making the request:", e)
     except IndexError:
         print("Not enough commits available.")
-
