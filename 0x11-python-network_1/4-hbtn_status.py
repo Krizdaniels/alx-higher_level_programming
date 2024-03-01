@@ -14,4 +14,3 @@ if __name__ == "__main__":
 
     except requests.RequestException as e:
         print(f"Error making the request: {e}")
-
