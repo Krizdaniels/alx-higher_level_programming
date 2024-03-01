@@ -1,14 +1,16 @@
 #!/usr/bin/python3
-"""A script for testing status of web pages
-"""
+"""It fetches https://intranet.hbtn.io/status"""
+import urllib.request
+
+
 if __name__ == "__main__":
-    import urllib.request
-    url = "https://intranet.hbtn.io/status"
-    with urllib.request.urlopen(url) as response:
-        bytes_content = response.read()
-        content = bytes_content.decode('utf-8')
-        print_str = '''Body response:
-\t- type: {}
-\t- content: {}
-\t- utf8 content: {}'''.format(type(bytes_content), bytes_content, content)
-        print(print_str)
+    """fetches https://intranet.hbtn.io/status"""
+    with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
+        html = response.read()
+        html_str = html.decode('utf-8')
+
+    print("Body response:")
+    print("\t- type: {}".format(type(html)))
+    print("\t- content: {}".format(html))
+    print("\t- utf8 content: {}".format(html_str))
+
