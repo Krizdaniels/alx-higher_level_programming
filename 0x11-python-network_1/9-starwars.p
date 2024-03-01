@@ -26,4 +26,3 @@ if __name__ == "__main__":
                 print(result.get('name'))
         except ValueError as invalid_json:
             print('Not a valid JSON')
-
