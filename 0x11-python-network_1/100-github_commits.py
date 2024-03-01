@@ -1,22 +1,25 @@
 #!/usr/bin/python3
-"""A script for posting data to star wars api
 """
+The list 10 commits (from the most recent to oldest) the repository “rails”
+by the user “rails”
+"""
+import requests
+from sys import argv
+
+
 if __name__ == "__main__":
-    import requests
-    import sys
-    url = "https://api.github.com/"
-    username = sys.argv[1]
-    repo = sys.argv[2]
-    commits_url = url + "repos/{}/{}/commits".format(username, repo)
-    response = requests.get(commits_url)
-    if response.status_code == requests.codes.ok and len(response.text) > 0:
-        try:
-            my_obj = response.json()
-            for i, obj in enumerate(my_obj):
-                if i == 10:
-                    break
-                if type(obj) is dict:
-                    name = obj.get('commit').get('author').get('name')
-                    print("{}: {}".format(obj.get('sha'), name))
-        except ValueError as invalid_json:
-            pass
+    """
+    list 10 commits (from the most recent to oldest) of the repository
+    “rails” by the user “rails”
+    """
+    repo = argv[1]
+    owner = argv[2]
+    url = 'https://api.github.com/repos/{}/{}/commits'.format(owner, repo)
+    r = requests.get(url)
+    res_list = r.json()
+    try:
+        for i in range(10):
+            print("{}: {}".format(res_list[i].get('sha'), res_list[i].
+                                  get('commit').get('author').get('name')))
+    except:
+        pass
