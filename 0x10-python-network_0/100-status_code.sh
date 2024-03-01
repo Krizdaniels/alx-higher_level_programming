@@ -1,3 +1,3 @@
 #!/bin/bash
 # A bash script to display status code of server
-curl - L - s - X HEAD - w "%{http_code}" "$1"
+curl -L -s -X HEAD -w "%{http_code}" "$1"
