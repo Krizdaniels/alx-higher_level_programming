@@ -3,14 +3,9 @@
 import requests
 
 if __name__ == "__main__":
-    """fetches https://intranet.hbtn.io/status using requests"""
-    try:
-        response = requests.get('https://intranet.hbtn.io/status')
-        response.raise_for_status()  # Check if the request was successful
+    url = 'https://alx-intranet.hbtn.io/status'
+    response = requests.get(url)
 
-        print("Body response:")
-        print(f"\t- type: {type(response.text)}")
-        print(f"\t- content: {response.text}")
-
-    except requests.RequestException as e:
-        print(f"Error making the request: {e}")
+    print("Body response:")
+    print("\t- type: {}".format(type(response.text)))
+    print("\t- content: {}".format(response.text))
