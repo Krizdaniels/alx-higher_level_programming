@@ -1,13 +1,11 @@
 #!/usr/bin/python3
-"""A script for testing status of web pages
-"""
-if __name__ == "__main__":
-    import requests
-    url = "https://intranet.hbtn.io/status"
-    response = requests.get(url)
-    content = response.text
-    print_str = '''Body response:
-\t- type: {}
-\t- content: {}'''.format(type(content), content)
-    print(print_str)
+"""It fetches https://intranet.hbtn.io/status using requests"""
+import requests
 
+
+if __name__ == "__main__":
+    """fetches https://intranet.hbtn.io/status using requests"""
+    r = requests.get('https://intranet.hbtn.io/status')
+    print("Body response:")
+    print("\t- type: {}".format(type(r.text)))
+    print("\t- content: {}".format(r.text))
