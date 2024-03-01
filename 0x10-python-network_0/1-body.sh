@@ -1,3 +1,3 @@
 #!/bin/bash
-# The shellcheck disable=SC2046
-if [ $(curl -L -s -X HEAD -w "%{http_code}" "$1") == '200' ]; then curl - Ls "$1"; fi
+# It takes in URL, sends request to the URL, displays size of body response
+curl -sX GET $1 -L
